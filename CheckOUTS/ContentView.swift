@@ -100,6 +100,17 @@ struct ContentView: View {
     @State private var calculationString = "0"
     @State private var undoLastTurn = 0
     
+    var winner: String {
+        var thisWinner = ""
+        if player1Points == 0{
+            thisWinner = player1Name
+        }
+        if player2Points == 0{
+            thisWinner = player2Name
+        }
+        return thisWinner
+    }
+    
     func changeTurns(){
         //Changes LED Status for player in 501 game
         player1Turn.toggle()
@@ -395,13 +406,16 @@ struct ContentView: View {
                                     VStack{
                                         Text("\(player1Name)").foregroundColor(.yellow).font(.title3.bold())
                                         //Darts thrown
-                                        Text("Darts thrown: \(dartsThrownHome)")
+                                        Text("Darts Thrown: \(dartsThrownHome)")
                                         //Highest Turn
                                         Text("Highest Turn: \(highestTurnHome)")
                                         //3 Dart Average
                                         Text("3 Dart Avg.: \(calculate3DartAverageHome)")
                                         //Check Out Percentage
                                         Text("Checkout %: \(calculateOutAverage)")
+                                        //Matches Won/Lost
+                                        Text("Matches Won: 1")
+                                        Text("Matches Lost: 0")
                                     }
                                 }
                                 Spacer()
@@ -410,13 +424,16 @@ struct ContentView: View {
                                     VStack{
                                         Text("\(player2Name)").foregroundColor(.yellow).font(.title3.bold())
                                         //Darts thrown
-                                        Text("Darts thrown: \(dartsThrownAway)")
+                                        Text("Darts Thrown: \(dartsThrownAway)")
                                         //Highest Turn
                                         Text("Highest Turn: \(highestTurnAway)")
                                         //3 Dart Average
                                         Text("3 Dart Avg.: \(calculate3DartAverageAway)")
                                         //Check Out Percentage
                                         Text("Checkout %: \(calculateOutAverage)")
+                                        //Matches Won/Lost
+                                        Text("Matches Won: 0")
+                                        Text("Matches Lost: 1")
                                     }
                                 }
                                 Spacer()
@@ -428,6 +445,40 @@ struct ContentView: View {
                         //CRICKET STATISTICS
                         Section{
                             Text("Under Construction").foregroundColor(.red)
+                            HStack{
+                            Spacer()
+                                VStack{
+                                    Text("\(player1Name)").foregroundColor(.yellow).font(.title3.bold())
+
+                                    Text("9 Marks: 0")
+                                    Text("7 Marks: 0")
+                                    Text("6 Marks: 0")
+                                    Text("5 Marks: 0")
+                                    Text("Darts Thrown: 0")
+                                    Text("Marks/Round: ")
+                                    Text("0.0 MPR")
+                                    Text("Matches Won: 0")
+                                    Text("Matches Lost: 0")
+                                }
+                                Spacer()
+                                VStack{
+                                    Text("\(player2Name)").foregroundColor(.yellow).font(.title3.bold())
+
+                                    Text("9 Marks: 0")
+                                    Text("7 Marks: 0")
+                                    Text("6 Marks: 0")
+                                    Text("5 Marks: 0")
+                                    Text("Darts Thrown: 0")
+                                    Text("Marks/Round: ")
+                                    Text("0.0 MPR")
+                                    Text("Matches Won: 0")
+                                    Text("Matches Lost: 0")
+                                }
+                                Spacer()
+                            }
+
+
+                            
                         } header: {
                             Text("Cricket").font(.title2)
                         }
@@ -628,6 +679,13 @@ struct ContentView: View {
                                             currentScore = 0
                                             undoLastTurn = 0
                                             changeTurns()
+                                            
+                                        }
+                                        
+                                        if player1Points == 0 || player2Points == 0
+                                        {
+                                            outSuccessAlert = true
+                                            restartGame()
                                         }
                                         
                                     } label: {
@@ -670,7 +728,11 @@ struct ContentView: View {
                             }.MakeButtonWhite()
                         }
                     }
-                }
+                }.alert(outTitle, isPresented: $outSuccessAlert) {
+                    Button("Continue"){}
+                } message: {
+                    Text("WINNER: \(winner) CONGRATULATIONS!")
+                }.keyboardType(.numberPad)
             }
             else if whatsMyOutScreenView{
                 VStack{

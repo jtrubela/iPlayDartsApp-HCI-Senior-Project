@@ -12,7 +12,6 @@
 		3D1DF9CD280B9EF800400BAB /* CheckoutOption3.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D1DF9CB280B9EF800400BAB /* CheckoutOption3.json */; };
 		3D1DF9CF280BB56700400BAB /* Checkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1DF9CE280BB56700400BAB /* Checkout.swift */; };
 		3D1DF9D1280BB60E00400BAB /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1DF9D0280BB60E00400BAB /* Bundle-Decodable.swift */; };
-		3DCCE0F4280FFF9B00DA240F /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCE0F3280FFF9B00DA240F /* Text.swift */; };
 		3DF8C437276ED2D1006582E7 /* CheckOUTSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8C436276ED2D1006582E7 /* CheckOUTSApp.swift */; };
 		3DF8C439276ED2D1006582E7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8C438276ED2D1006582E7 /* ContentView.swift */; };
 		3DF8C43B276ED2D3006582E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DF8C43A276ED2D3006582E7 /* Assets.xcassets */; };
@@ -25,7 +24,6 @@
 		3D1DF9CB280B9EF800400BAB /* CheckoutOption3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CheckoutOption3.json; sourceTree = "<group>"; };
 		3D1DF9CE280BB56700400BAB /* Checkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkout.swift; sourceTree = "<group>"; };
 		3D1DF9D0280BB60E00400BAB /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
-		3DCCE0F3280FFF9B00DA240F /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		3DF8C433276ED2D1006582E7 /* CheckOUTS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckOUTS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DF8C436276ED2D1006582E7 /* CheckOUTSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOUTSApp.swift; sourceTree = "<group>"; };
 		3DF8C438276ED2D1006582E7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,14 +61,13 @@
 		3DF8C435276ED2D1006582E7 /* CheckOUTS */ = {
 			isa = PBXGroup;
 			children = (
-				3DF8C436276ED2D1006582E7 /* CheckOUTSApp.swift */,
 				3DF8C438276ED2D1006582E7 /* ContentView.swift */,
-				3DCCE0F3280FFF9B00DA240F /* Text.swift */,
 				3D1DF9CE280BB56700400BAB /* Checkout.swift */,
 				3D1DF9D0280BB60E00400BAB /* Bundle-Decodable.swift */,
 				3D1DF9C8280B987D00400BAB /* CheckoutOption1.json */,
 				3D1DF9CA280B9EF800400BAB /* CheckoutOption2.json */,
 				3D1DF9CB280B9EF800400BAB /* CheckoutOption3.json */,
+				3DF8C436276ED2D1006582E7 /* CheckOUTSApp.swift */,
 				3DF8C43A276ED2D3006582E7 /* Assets.xcassets */,
 				3DF8C43C276ED2D3006582E7 /* Preview Content */,
 			);
@@ -159,7 +156,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D1DF9CF280BB56700400BAB /* Checkout.swift in Sources */,
-				3DCCE0F4280FFF9B00DA240F /* Text.swift in Sources */,
 				3DF8C439276ED2D1006582E7 /* ContentView.swift in Sources */,
 				3DF8C437276ED2D1006582E7 /* CheckOUTSApp.swift in Sources */,
 				3D1DF9D1280BB60E00400BAB /* Bundle-Decodable.swift in Sources */,
